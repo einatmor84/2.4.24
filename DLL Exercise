@@ -1,0 +1,50 @@
+SQL DLL (Data Definition Language) exercise:
+
+Instructions:
+Open your preferred SQL Server client or tool.
+Execute the following SQL statements to create a database, a table, and perform various DDL operations.
+
+-- Exercise: SQL DLL Operations
+
+        -- Task 1: Create a new database named "SalesDB"
+        CREATE DATABASE IF NOT EXISTS SalesDB;   
+
+        -- Task 2: Switch to the created database
+        USE SalesDB;
+
+        -- Task 3: Create a table named "Products"
+        CREATE TABLE Products (
+        ProductID INT PRIMARY KEY,
+        ProductName VARCHAR(255) NOT NULL,
+        Price DECIMAL(10, 2) NOT NULL,
+        StockQuantity INT
+        );
+
+        -- Task 4: Add a new column "Category" to the "Products" table
+        ALTER TABLE Products
+        ADD Category VARCHAR(50);
+
+        -- Task 5: Rename the column "StockQuantity" to "AvailableStock"
+        EXEC sp_rename 'Products.StockQuantity', 'AvailableStock', 'COLUMN';
+
+        -- Task 6: Drop the "Category" column from the "Products" table
+        ALTER TABLE Products
+        DROP COLUMN Category;
+
+        -- Task 7: Create an index on the "ProductName" column for faster search
+        CREATE INDEX idx_ProductName ON Products (ProductName);
+
+        -- Task 8: Drop the "Products" table
+        DROP TABLE IF EXISTS Products;
+
+
+Questions:
+
+1.	What is the purpose of the CREATE DATABASE IF NOT EXISTS statement?
+2.	Why is the USE statement used after creating the database?
+3.	What does the sp_rename quarry achieve in Task 5?
+4.	Why might you want to create an index on the "ProductName" column?
+5.	What are the potential implications of dropping a table using the DROP TABLE statement?
+6.	ETGAR: Explain the significance of the PRIMARY KEY constraint on the "ProductID" column.
+
+
