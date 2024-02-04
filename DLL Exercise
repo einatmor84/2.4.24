@@ -6,7 +6,7 @@ Execute the following SQL statements to create a database, a table, and perform 
 
 -- Exercise: SQL DLL Operations
 
-        -- Task 1: Create a new database named "SalesDB"
+        -- Task 1: Create a new database named "SalesDB"   \\ Give the table also your name example: my table will be "SalesDBEinat"
         CREATE DATABASE IF NOT EXISTS SalesDB;   
 
         -- Task 2: Switch to the created database
