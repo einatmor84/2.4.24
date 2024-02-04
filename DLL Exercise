@@ -48,3 +48,14 @@ Questions:
 6.	ETGAR: Explain the significance of the PRIMARY KEY constraint on the "ProductID" column.
 
 
+
+
+תשובות:
+
+1--
+ IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'SalesDBEinat') CREATE DATABASE SalesDBEinat;  
+
+
+
+
+
